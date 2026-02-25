@@ -1,0 +1,24 @@
+{
+  "name": "REBORN",
+  "short_name": "REBORN",
+  "description": "REBORN RED — Music driven merch. Keep Shining.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#990000",
+  "icons": [
+    {
+      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f27c9c07c504c24bdadc6/1772038089228/Reborn-Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f27c474ad1a18950301ea/1772038084292/Reborn-Icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
