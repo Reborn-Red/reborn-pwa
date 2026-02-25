@@ -9,13 +9,13 @@
   "theme_color": "#990000",
   "icons": [
     {
-      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f47ef6e6f335c5ca6f0be/1772046319752/Reborn-Icon-512.png",
+      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f4cbc3524924b8e15b2ca/1772047548121/Reborn-Icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f47ef6708c5690d2aae31/1772046319814/Reborn-Icon-1024.png",
+      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f4cfe95542560819f19b7/1772047614787/Reborn-Icon-1024.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
