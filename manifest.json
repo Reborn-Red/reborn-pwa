@@ -20,14 +20,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f3b7d99049a19e8389fd8/1772043133376/Reborn-Splash-Screen.png",
-      "sizes": "2732x2732",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "REBORN"
-    }
   ]
 }
