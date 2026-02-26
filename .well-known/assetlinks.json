@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "red.reborn.app",
+    "sha256_cert_fingerprints": [
+      "50:D5:34:6E:63:28:11:DC:A5:8F:3B:EB:EE:6B:C8:7A:84:9E:77:38:D0:AE:32:E0:FD:6A:40:D9:B8:21:C3:E6"
+    ]
+  }
+}]
