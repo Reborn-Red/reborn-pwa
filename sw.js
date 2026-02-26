@@ -1,12 +1,12 @@
 // REBORN PWA Service Worker
 // Caches key assets for faster loading and basic offline support
 
-const CACHE_NAME = 'reborn-cache-v1';
+const CACHE_NAME = 'reborn-cache-v2';
 
 const ASSETS_TO_CACHE = [
   'https://reborn.red/',
-  'https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f27c9c07c504c24bdadc6/1772038089228/Reborn-Icon-512.png',
-  'https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f27c474ad1a18950301ea/1772038084292/Reborn-Icon-1024.png'
+  'https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f47ef6e6f335c5ca6f0be/1772046319752/Reborn-Icon-512.png',
+  'https://static1.squarespace.com/static/5c868012348cd967825e0d25/t/699f47ef6708c5690d2aae31/1772046319814/Reborn-Icon-1024.png'
 ];
 
 // Install — cache key assets
