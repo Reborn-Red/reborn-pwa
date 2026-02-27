@@ -1,13 +1,16 @@
 // REBORN PWA Service Worker - v3
+// Network-first + cache fallback + cleanup old caches
+
 const CACHE_NAME = 'reborn-cache-v3';
 
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/icons/icon-512.png',                    // ← use relative paths if possible
+  '/icons/icon-512.png',
   '/icons/icon-1024.png',
-  // Add more critical files if you have them (CSS, JS bundles, etc.)
-  // e.g. '/css/main.css', '/js/main.js'
+  '/icons/icon-192.png',
+  '/icons/icon-192-maskable.png'
+  // Add more critical static files here if you have them (CSS, JS, fonts…)
 ];
 
 self.addEventListener('install', event => {
@@ -23,8 +26,9 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(
-        keys.filter(key => key !== CACHE_NAME)
-            .map(key => caches.delete(key))
+        keys
+          .filter(key => key !== CACHE_NAME)
+          .map(key => caches.delete(key))
       );
     })
   );
@@ -34,11 +38,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
-  // Network-first strategy for everything
   event.respondWith(
     fetch(event.request)
       .then(response => {
-        // Cache successful responses (except non-200 or opaque)
+        // Cache successful responses
         if (response && response.status === 200 && response.type !== 'opaque') {
           const responseClone = response.clone();
           caches.open(CACHE_NAME).then(cache => {
@@ -48,12 +51,14 @@ self.addEventListener('fetch', event => {
         return response;
       })
       .catch(() => {
-        // Fallback to cache
+        // Network failed → try cache
         return caches.match(event.request).then(cached => {
-          return cached || new Response('Offline - content not available', {
-            status: 503,
-            statusText: 'Service Unavailable'
-          });
+          return cached || new Response(
+            '<h1>Offline</h1><p>REBORN content not available right now.<br>Please check your connection.</p>',
+            {
+              headers: { 'Content-Type': 'text/html' }
+            }
+          );
         });
       })
   );
