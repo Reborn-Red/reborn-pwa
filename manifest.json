@@ -6,7 +6,7 @@
   "scope": "/",
   "id": "/",
   "display": "standalone",
-  "orientation": "any",                     // ← changed to "any" or "natural" to allow rotation
+  "orientation": "any",
   "background_color": "#000000",
   "theme_color": "#990000",
   "icons": [
@@ -22,15 +22,14 @@
       "type": "image/png",
       "purpose": "any"
     },
-    // Recommended additions (create 192×192 versions if possible)
     {
-      "src": "/icons/icon-192.png",           // ← add this file if you can
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-192-maskable.png",  // ← dedicated maskable version
+      "src": "/icons/icon-192-maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
